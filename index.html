@@ -1,0 +1,463 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Sara ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    background: linear-gradient(135deg,#080307,#260817,#10050c);
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.container {
+    max-width: 760px;
+    margin: auto;
+    padding: 65px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.heart {
+    font-size: 75px;
+    animation: heartbeat 1.3s infinite;
+    filter: drop-shadow(0 0 20px #ff174f);
+}
+
+@keyframes heartbeat {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+h1 {
+    font-size: clamp(45px,10vw,75px);
+    color: #ff668c;
+    letter-spacing: 8px;
+    text-shadow: 0 0 20px #ff174f,0 0 50px #ff174f;
+    margin-top: 15px;
+}
+
+.subtitle {
+    color: #e9b7c6;
+    margin-top: 15px;
+    font-size: 15px;
+    line-height: 2;
+}
+
+.card {
+    margin-top: 35px;
+    padding: 32px 24px;
+    background: rgba(255,255,255,0.055);
+    border: 1px solid rgba(255,130,160,0.25);
+    border-radius: 25px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 35px #a91d4322;
+}
+
+h2 {
+    color: #ff829f;
+    margin-bottom: 22px;
+    font-size: 22px;
+}
+
+.message {
+    line-height: 2.8;
+    color: #f5dce4;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.glow {
+    color: #ff91ac;
+    text-shadow: 0 0 15px #ff174f;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+button, .music-button {
+    display: inline-block;
+    background: linear-gradient(45deg,#a30d3b,#ff527b);
+    border: none;
+    color: white;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: .3s;
+}
+
+button:hover, .music-button:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 25px #ff527b;
+}
+
+audio {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#secret {
+    display: none;
+    margin-top: 25px;
+    color: #ffb0c5;
+    line-height: 2.8;
+    animation: appear 1s;
+    font-size: 15px;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    margin-top: 55px;
+    color: #c18b9e;
+    font-size: 13px;
+    line-height: 2.5;
+}
+
+.floating {
+    position: fixed;
+    bottom: -30px;
+    color: #ff638c;
+    animation: floatUp 8s linear forwards;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="heart">❤️</div>
+
+    <h1>SARA</h1>
+
+    <p class="subtitle">
+        برای قشنگ‌ترین اتفاق زندگی من...
+        <br>
+        این صفحه فقط و فقط برای تو ساخته شده.
+    </p>
+
+
+    <!-- MUSIC SECTION -->
+
+    <div class="card">
+
+        <h2>🎵 آهنگ مخصوص ما</h2>
+
+        <p class="subtitle">
+            آهنگی که دوست داری رو انتخاب کن
+            <br>
+            تا از همین‌جا با هم گوشش کنیم ❤️
+        </p>
+
+        <label for="musicFile" class="music-button">
+            🎧 انتخاب آهنگ از دستگاه
+        </label>
+
+        <input
+            type="file"
+            id="musicFile"
+            accept="audio/*"
+            hidden
+        >
+
+        <p id="musicName" class="subtitle">
+            هنوز آهنگی انتخاب نشده...
+        </p>
+
+        <audio id="player" controls loop
+               style="display:none;">
+        </audio>
+
+    </div>
+
+
+    <!-- LOVE LETTER -->
+
+    <div class="card">
+
+        <h2>یه حرف از ته قلبم برای تو ❤️</h2>
+
+        <p class="message">
+
+            سارای من... ❤️
+
+            <br><br>
+
+            نمی‌دونم چطوری باید ازت بگم،
+            چون بعضی حس‌ها اون‌قدر قشنگن
+            که هیچ کلمه‌ای نمی‌تونه کامل توصیفشون کنه.
+
+            <br><br>
+
+            از وقتی وارد زندگی من شدی،
+            یه چیزهایی برام تغییر کرده.
+            روزهای معمولی قشنگ‌تر شدن،
+            لبخند زدن راحت‌تر شده
+            و حتی فکر کردن به تو می‌تونه
+            حال یه روز سخت رو بهتر کنه.
+
+            <br><br>
+
+            می‌دونی قشنگ‌ترین قسمت دوست داشتنت چیه؟
+            اینکه دلم می‌خواد از همه‌چیز برات بگم؛
+            از اتفاق‌های کوچیک روزم،
+            از خوشحالی‌هام،
+            از نگرانی‌هام
+            و حتی از چیزهای بی‌اهمیتی که
+            فقط دوست دارم تو هم بدونیشون.
+
+            <br><br>
+
+            من تو رو فقط برای لحظه‌های خوب نمی‌خوام؛
+            دلم می‌خواد کنار هم بزرگ بشیم،
+            چیزهای جدید تجربه کنیم،
+            با هم بخندیم،
+            اشتباه کنیم،
+            یاد بگیریم
+            و خاطره‌هایی بسازیم که
+            سال‌ها بعد با یادآوریشون لبخند بزنیم.
+
+            <br><br>
+
+            شاید نتونم همیشه با بهترین کلمات
+            احساسم رو نشون بدم،
+            شاید گاهی نتونم اون‌طوری که باید
+            بگم چقدر برام مهمی،
+            اما هیچ‌کدوم از این‌ها
+            از ارزش تو برای من کم نمی‌کنه.
+
+            <br><br>
+
+            اگه یه روز ازم بپرسن
+            یکی از قشنگ‌ترین اتفاق‌های زندگیت چی بوده،
+            با تمام وجود از آشنایی با تو حرف می‌زنم.
+
+            <br><br>
+
+            سارا جان،
+            نمی‌خوام فقط یه اسم توی گوشیت باشم؛
+            دوست دارم کسی باشم که
+            کنار بودنش احساس آرامش کنی،
+            بهش اعتماد داشته باشی
+            و بتونی خود واقعیت باشی.
+
+            <br><br>
+
+            <span class="glow">
+                تو برای من خاصی،
+                نه به خاطر اینکه کاملی،
+                بلکه به خاطر اینکه خودتی...
+                و من همین خودت رو دوست دارم. ❤️
+            </span>
+
+            <br><br>
+
+            ممنونم که توی دنیای منی.
+
+            <br><br>
+
+            دوستت دارم،
+            بیشتر از چیزی که بشه
+            توی یه صفحه نوشت. ❤️
+
+        </p>
+
+    </div>
+
+
+    <!-- SECRET MESSAGE -->
+
+    <div class="card">
+
+        <h2>یه سورپرایز کوچولو برات دارم...</h2>
+
+        <p class="subtitle">
+            این دکمه رو بزن،
+            یه پیام دیگه هم برای تو دارم.
+        </p>
+
+        <button onclick="showSecret()">
+            باز کردن پیام مخصوص تو ❤️
+        </button>
+
+        <p id="secret">
+
+            سارا جانم... ❤️
+
+            <br><br>
+
+            اگه می‌دونستی چقدر برام عزیزی،
+            شاید می‌فهمیدی چرا حتی وسط شلوغ‌ترین
+            روزهام هم یه گوشه از فکرم پیش توئه.
+
+            <br><br>
+
+            من ازت یه آدم بی‌نقص نمی‌خوام؛
+            من خودت رو می‌خوام،
+            با تمام خنده‌هات، شیطنت‌هات،
+            اخلاق قشنگت و حتی روزهایی که
+            حوصله هیچ‌چیزی رو نداری.
+
+            <br><br>
+
+            دلم می‌خواد کلی خاطره با هم بسازیم،
+            کلی بخندیم،
+            کلی حرف برای گفتن داشته باشیم
+            و هر روز بیشتر از قبل همدیگه رو بشناسیم.
+
+            <br><br>
+
+            اگه قرار باشه یه بار دیگه
+            از اول همه‌چیز رو شروع کنم،
+            باز هم دوست دارم مسیر آشناییمون
+            به تو ختم بشه.
+
+            <br><br>
+
+            <span class="glow">
+                سارا، تو انتخاب قشنگ قلب منی.
+                <br>
+                دوستت دارم، بیشتر از چیزی که
+                این چند خط بتونه نشون بده. ❤️
+            </span>
+
+            <br><br>
+
+            این صفحه برای توئه،
+            چون تو برای من خاصی...
+
+        </p>
+
+    </div>
+
+
+    <footer>
+
+        <div class="heart">❤️</div>
+
+
+        <br>
+
+        یه صفحه کوچیک برای یه آدم خیلی خاص...
+
+        <br>
+
+        <span style="color:#ff668c;">
+            ♥ همیشه خاص ♥
+        </span>
+
+    </footer>
+
+</div>
+
+
+<script>
+
+// SECRET MESSAGE
+
+function showSecret() {
+    document.getElementById("secret").style.display = "block";
+}
+
+
+// MUSIC UPLOAD AND PLAY
+
+const musicFile = document.getElementById("musicFile");
+const player = document.getElementById("player");
+const musicName = document.getElementById("musicName");
+
+let currentMusicURL = null;
+
+musicFile.addEventListener("change", function() {
+
+    const file = this.files[0];
+
+    if (!file) return;
+
+    if (currentMusicURL) {
+        URL.revokeObjectURL(currentMusicURL);
+    }
+
+    currentMusicURL = URL.createObjectURL(file);
+
+    player.src = currentMusicURL;
+    player.style.display = "block";
+
+    musicName.textContent = "🎶 " + file.name;
+
+    player.play().catch(() => {
+        musicName.textContent =
+            file.name + " — برای پخش روی Play بزن.";
+    });
+
+});
+
+
+// FLOATING HEARTS
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "floating";
+    heart.innerHTML = "♥";
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (15 + Math.random() * 25) + "px";
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 10000);
+
+}
+
+setInterval(createHeart, 600);
+
+</script>
+
+</body>
+</html>
